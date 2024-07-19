@@ -26,14 +26,17 @@ docker-compose --version
 
 ![image](https://github.com/user-attachments/assets/ef498b55-15e3-44c7-bdf4-44c03a442434)
 <br/>
+
 ### 3. Logstash 구성 파일 작성
 - ```\ELK\logstash\pipeline\logstash.conf```에 작성
 -  Filebeat에서 데이터를 수신하고, CSV 형식의 데이터를 파싱 및 변환하여 Elasticsearch에 전송하는 파이프라인을 설정합니다.
 <br/>
+
 ### 4. Filebeat 설정 파일 작성
 - ```\ELK\filebeat\filebeat.yml```에 작성
 - Filebeat가 CSV 파일을 읽고 Logstash에 전송하도록 설정하는 구성입니다. 
 <br/>
+
 ### 5. Docker Compose 실행
 ```
 sudo docker-compose up
