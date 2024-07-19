@@ -1,0 +1,13 @@
+filebeat.inputs:
+- type: log
+  enabled: true
+  paths:
+    - /usr/share/filebeat/data/bank-data.csv  # 컨테이너 내부 경로
+  multiline:
+    pattern: '^\s'
+    match: after
+  fields:
+    type: csv
+
+output.logstash:
+  hosts: ["logstash:5044"]
