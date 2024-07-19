@@ -1,8 +1,9 @@
-# WOORI FISA ELK 스택 구축 프로젝트
+# 우리 FISA ELK 스택 구축 프로젝트
 ## 개발 팀원
 - 이승언, 이정욱, 손대현, 최수연
+<br/>
 
-## Docker를 사용하여 ELK 스택 구축하기
+## 🔨  Docker 사용해서 ELK 스택 구축하기
 ### 1. Docker 및 Docker Compose 설치
 ```
 # Docker 설치
@@ -17,26 +18,21 @@ sudo chmod +x /usr/local/bin/docker-compose
 docker --version
 docker-compose --version
 ```
+<br/>
 
 ### 2. Docker Compose 파일 작성
 - ```\ELK\docker-compose.yml```에 작성
 - Docker Compose를 사용하여 ELK 스택 (Elasticsearch, Logstash, Kibana, Filebeat) 환경을 설정하는 스크립트입니다.
-<br/>
 
 ![image](https://github.com/user-attachments/assets/ef498b55-15e3-44c7-bdf4-44c03a442434)
-<br/>
 
 ### 3. Logstash 구성 파일 작성
 - ```\ELK\logstash\pipeline\logstash.conf```에 작성
 -  Filebeat에서 데이터를 수신하고, CSV 형식의 데이터를 파싱 및 변환하여 Elasticsearch에 전송하는 파이프라인을 설정합니다.
-<br/>
-<br/>
 
 ### 4. Filebeat 설정 파일 작성
 - ```\ELK\filebeat\filebeat.yml```에 작성
 - Filebeat가 CSV 파일을 읽고 Logstash에 전송하도록 설정하는 구성입니다. 
-<br/>
-<br/>
 
 ### 5. Docker Compose 실행
 ```
