@@ -8,7 +8,7 @@ while getopts "c:" opt; do
         c )
             CONFIG_YML="$OPTARG"  # config-yml 옵션
             ;;
-        \? )
+        \? ) # 지정한 옵션 외의 arg 가 입력된 경우  , exit 1은 실패 0은 성공을 의미
             echo "Usage: cmd [-c config-yml]"
             exit 1
             ;;
