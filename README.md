@@ -34,7 +34,7 @@ docker-compose --version
 
 ### 4. Filebeat 설정 파일 작성
 - ```\ELK\filebeat\filebeat.yml```에 작성
-- Filebeat가 CSV 파일을 읽고 Logstash에 전송하도록 설정하는 구성입니다. 
+- Filebeat가 CSV 파일을 읽고 Logstash에 전송하도록 설정하는 구성입니다.
 <br/>
 
 ### 5. Docker Compose 실행
@@ -55,3 +55,82 @@ sudo docker-compose up
 
 ## 방법 2. 우분투 리눅스에서 ELK 스택 구축하기
 ### [노션링크](https://mirage-rosemary-e9d.notion.site/07-19-D-10-Pipe-13c5ed9ed2464108b8fde0675bb5346f)
+
+
+<br/>
+
+### 쉘 스크립트를 이용한 설치 방법
+<hr>
+
+#### ELK stack 전체를 한번에 설치하는 경우
+
+
+-  ELK-Install.sh
+```
+# ElasticSearch - Logstash - Filebeat 순으로 패키지 설치를 진행합니다.
+# - 기존의 설치, 실행중인 서비스가 있을 경우
+# - 서비스 종료 - 설정 파일 ,패키지 삭제 후 설치를 시작합니다.
+
+cd /{path to ELK-Install.sh}
+ELK-Install.sh
+```
+
+<br>
+
+### ELK Stack 요소 별로 설치
+
+- ES-Install.sh
+
+```
+# ElasticSearch 패키지 파일을 설치합니다.
+# - 기존에 실행 , 실행중인 서비스가 있을 경우
+# - 서비스 종료 - 설정 파일 ,패키지 삭제 후 설치를 시작합니다.
+
+cd /{path to ELK-Install.sh}
+bash ES-Install.sh
+```
+<br>
+
+- Logstash-Install.sh
+```
+# Logstash 패키지 파일을 설치합니다.
+# - 기존에 실행 , 실행중인 서비스가 있을 경우
+# - 서비스 종료 - 설정 파일 ,패키지 삭제 후 설치를 시작합니다.
+
+cd /{path to Logstash-Install.sh}
+bash Logstash-Install.sh
+
+# - .yml 파일 , 혹은 filtering 파일을 지정할 경우
+bash Logstash-Install.sh -c /path/to/*.yml -f /path/to/bankfisa3.conf
+
+```
+<br>
+
+- Filebeat-Install.sh
+```
+# Logstash 패키지 파일을 설치합니다.
+# - 기존에 실행 , 실행중인 서비스가 있을 경우
+# - 서비스 종료 - 설정 파일 ,패키지 삭제 후 설치를 시작합니다.
+
+cd /{path to Logstash-Install.sh}
+bash Filebeat-Install.sh
+
+# - *.yml 파일을 추가하는 경우
+# - yml파일에 지정한 데로 파일이 위치해 있어야 합니다.
+bash Filebeat-Install.sh -c /path/to/{*.yml}
+
+
+```
+
+<br>
+
+### 추후 개선 사항
+
+```
+- python 코드로 shell script대체 해보기
+- curl 명령어를 사용해 코드 줄이기
+- 다양한 옵션 을  받아들일 수 있게 하기
+- 키바나 추가 후 윈도우 에서 확인할 것
+- 도커를 잘 쓰자
+```
+
