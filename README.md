@@ -26,7 +26,7 @@ docker-compose --version
 - ```\ELK\docker-compose.yml```에 작성
 - Docker Compose를 사용하여 ELK 스택 (Elasticsearch, Logstash, Kibana, Filebeat) 환경을 설정하는 스크립트입니다.
 
-![image](https://github.com/user-attachments/assets/ef498b55-15e3-44c7-bdf4-44c03a442434)
+<img src="https://github.com/user-attachments/assets/ef498b55-15e3-44c7-bdf4-44c03a442434"  width="600"/>
 <br/>
 
 ### 3. Logstash 구성 파일 작성
@@ -65,19 +65,20 @@ sudo docker-compose up
     // 그룹과 다른 사용자의 쓰기 권한을 제거
     chmod go-w ~/ELK/filebeat/filebeat.yml
     ```
+    <br/>
 - 우분투에서 **용량 부족 문제 해결**을 위해 VirtualBox에서 메모리, 디스크 용량을 올린 우분투 환경을 새로 만듦
-
+    <br/>
 - VirtualBox에서 ```127.0.0.1 -> 10.0.2.15```로 포트포워딩 (22, 9200, 5601) 설정
-![화면 캡처 2024-07-19 173507](https://github.com/user-attachments/assets/ef59c3d8-dd0f-425b-9448-676f03a65727)
+<img src="https://github.com/user-attachments/assets/ef59c3d8-dd0f-425b-9448-676f03a65727"  width="600"/>
 
 ## 캡쳐 화면
 ### Elasticsearch Head 화면
-![화면 캡처 2024-07-19 161052](https://github.com/user-attachments/assets/7a71cc81-e0cf-486f-b53a-c011f34a265f)
+<img src="https://github.com/user-attachments/assets/7a71cc81-e0cf-486f-b53a-c011f34a265f"  width="600"/>
 <br/>
 
 
 ### 우분투 logstash 부분 로그
-![화면 캡처 2024-07-19 161201](https://github.com/user-attachments/assets/beda40d4-a476-4041-9bf5-04576bea7209)
+<img src="https://github.com/user-attachments/assets/beda40d4-a476-4041-9bf5-04576bea7209"  width="600"/>
 <br/>
 
 ## 방법 2. 우분투 리눅스에서 ELK 스택 구축하기
