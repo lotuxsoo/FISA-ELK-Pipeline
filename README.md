@@ -59,19 +59,19 @@ sudo docker-compose up
         index => "bank-data"
     }
     ```
-    <br/>
+
 - **filebeat.yml**: 파일 권한 설정 변경
     ```
     // 그룹과 다른 사용자의 쓰기 권한을 제거
     chmod go-w ~/ELK/filebeat/filebeat.yml
     ```
-    <br/>
+
 - 우분투에서 **용량 부족 문제 해결**을 위해 VirtualBox에서 메모리, 디스크 용량을 올린 우분투 환경을 새로 만듦
     
-    <br/>
+
 - VirtualBox에서 ```127.0.0.1 -> 10.0.2.15```로 포트포워딩 (22, 9200, 5601) 설정
 <img src="https://github.com/user-attachments/assets/ef59c3d8-dd0f-425b-9448-676f03a65727"  width="600"/>
-
+<br/>
 ## 캡쳐 화면
 ### Elasticsearch Head 화면
 <img src="https://github.com/user-attachments/assets/7a71cc81-e0cf-486f-b53a-c011f34a265f"  width="700"/>
@@ -89,7 +89,7 @@ sudo docker-compose up
 ## 쉘 스크립트를 이용한 설치 방법
 
 ### ELK stack 전체를 한번에 설치하는 경우
--  ELK-Install.sh
+-  **ELK-Install.sh**
 ```
 # ElasticSearch - Logstash - Filebeat 순으로 패키지 설치를 진행합니다.
 # - 기존의 설치, 실행중인 서비스가 있을 경우
@@ -103,7 +103,7 @@ ELK-Install.sh
 
 ### ELK Stack 요소 별로 설치
 
-- ES-Install.sh
+- **ES-Install.sh**
 
 ```
 # ElasticSearch 패키지 파일을 설치합니다.
@@ -115,7 +115,7 @@ bash ES-Install.sh
 ```
 <br>
 
-- Logstash-Install.sh
+- **Logstash-Install.sh**
 ```
 # Logstash 패키지 파일을 설치합니다.
 # - 기존에 실행 , 실행중인 서비스가 있을 경우
@@ -133,7 +133,7 @@ bash Logstash-Install.sh -f /path/to/bankfisa3.conf
 ```
 <br>
 
-- Filebeat-Install.sh
+- **Filebeat-Install.sh**
 ```
 # Logstash 패키지 파일을 설치합니다.
 # - 기존에 실행 , 실행중인 서비스가 있을 경우
@@ -145,11 +145,8 @@ bash Filebeat-Install.sh
 # - *.yml 파일을 추가하는 경우
 # - yml파일에 지정한 위치에 파일이 존재 해야 합니다.
 bash Filebeat-Install.sh -c /path/to/{*.yml}
-
-
 ```
-
-<br>
+<br/>
 
 
 ## 💥 추후 해볼 것
