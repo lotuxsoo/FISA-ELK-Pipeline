@@ -1,5 +1,5 @@
 # 우리FISA ELK 스택 구축 프로젝트 🔨
-> Window 환경에서 진행한 ELK 파이프라인(Elasticsearch, Logstash, Kibana, Filebeat) 스택 구축을 우분투 리눅스 환경으로도 진행해 보았습니다.
+> Window 환경에서 진행한 ELK 파이프라인(Elasticsearch, Logstash, Kibana, Filebeat) 스택 구축을 **우분투 리눅스** 환경으로 진행한 프로젝트입니다.
 
 ### 개발 팀원
 - 이승언, 이정욱, 손대현, 최수연
@@ -46,13 +46,13 @@ sudo docker-compose up
 <br/>
 
 ## 💥 트러블 슈팅
-- ```filebeat.yml```: paths 경로를 호스트 경로가 아닌 도커 컨테이너 내부 경로로 변경하여 해결
+- **filebeat.yml**: paths 경로를 호스트 경로가 아닌 도커 컨테이너 내부 경로로 변경하여 해결
     ```
     paths:
     - /usr/share/filebeat/data/bank-data.csv  # 컨테이너 내부 경로
     ```
     <br/>
-- ```logstash.conf```: ```http://localhost:9200```대신 ```elasticsearch:9200```로 변경해서 도커 컨테이너 이름을 사용하도록 변경하여 해결
+- **logstash.conf**: ```http://localhost:9200```대신 ```elasticsearch:9200```로 변경해서 도커 컨테이너 이름을 사용하도록 변경하여 해결
     ```
       elasticsearch {
         hosts => ["elasticsearch:9200"]
@@ -60,13 +60,14 @@ sudo docker-compose up
     }
     ```
     <br/>
-- ```filebeat.yml```: 파일 권한 설정 변경
+- **filebeat.yml**: 파일 권한 설정 변경
     ```
     // 그룹과 다른 사용자의 쓰기 권한을 제거
     chmod go-w ~/ELK/filebeat/filebeat.yml
     ```
     <br/>
 - 우분투에서 **용량 부족 문제 해결**을 위해 VirtualBox에서 메모리, 디스크 용량을 올린 우분투 환경을 새로 만듦
+    
     <br/>
 - VirtualBox에서 ```127.0.0.1 -> 10.0.2.15```로 포트포워딩 (22, 9200, 5601) 설정
 <img src="https://github.com/user-attachments/assets/ef59c3d8-dd0f-425b-9448-676f03a65727"  width="600"/>
