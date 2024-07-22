@@ -26,7 +26,7 @@ docker-compose --version
 - ```\ELK\docker-compose.yml```에 작성
 - Docker Compose를 사용하여 ELK 스택 (Elasticsearch, Logstash, Kibana, Filebeat) 환경을 설정하는 스크립트입니다.
 
-<img src="https://github.com/user-attachments/assets/ef498b55-15e3-44c7-bdf4-44c03a442434"  width="600"/>
+<img src="https://github.com/user-attachments/assets/ef498b55-15e3-44c7-bdf4-44c03a442434"  width="700"/>
 <br/>
 
 ### 3. Logstash 구성 파일 작성
@@ -73,12 +73,12 @@ sudo docker-compose up
 
 ## 캡쳐 화면
 ### Elasticsearch Head 화면
-<img src="https://github.com/user-attachments/assets/7a71cc81-e0cf-486f-b53a-c011f34a265f"  width="600"/>
+<img src="https://github.com/user-attachments/assets/7a71cc81-e0cf-486f-b53a-c011f34a265f"  width="700"/>
 <br/>
 
 
 ### 우분투 logstash 부분 로그
-<img src="https://github.com/user-attachments/assets/beda40d4-a476-4041-9bf5-04576bea7209"  width="600"/>
+<img src="https://github.com/user-attachments/assets/beda40d4-a476-4041-9bf5-04576bea7209"  width="700"/>
 <br/>
 
 ## 방법 2. 우분투 리눅스에서 ELK 스택 구축하기
