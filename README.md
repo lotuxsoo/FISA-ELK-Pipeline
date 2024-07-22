@@ -51,7 +51,7 @@ sudo docker-compose up
     paths:
     - /usr/share/filebeat/data/bank-data.csv  # 컨테이너 내부 경로
     ```
-    <br/>
+    
 - **logstash.conf**: ```http://localhost:9200```대신 ```elasticsearch:9200```로 변경해서 도커 컨테이너 이름을 사용하도록 변경하여 해결
     ```
       elasticsearch {
@@ -72,6 +72,7 @@ sudo docker-compose up
 - VirtualBox에서 ```127.0.0.1 -> 10.0.2.15```로 포트포워딩 (22, 9200, 5601) 설정
 <img src="https://github.com/user-attachments/assets/ef59c3d8-dd0f-425b-9448-676f03a65727"  width="600"/>
 <br/>
+
 ## 캡쳐 화면
 ### Elasticsearch Head 화면
 <img src="https://github.com/user-attachments/assets/7a71cc81-e0cf-486f-b53a-c011f34a265f"  width="700"/>
