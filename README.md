@@ -2,7 +2,7 @@
 > Window 환경에서 진행한 ELK 파이프라인(Elasticsearch, Logstash, Kibana, Filebeat) 스택 구축을 **우분투 리눅스** 환경으로 진행한 프로젝트입니다.
 
 ### 개발 팀원
-- 이승언, 이정욱, 손대현, 최수연
+- 이승언, 이정욱, 손대현, 최수연 
 <br/>
 
 ## 방법 1. Docker 사용해서 ELK 스택 구축하기
