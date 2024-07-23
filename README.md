@@ -87,7 +87,7 @@ sudo docker-compose up
 ### [노션링크](https://mirage-rosemary-e9d.notion.site/07-19-D-10-Pipe-13c5ed9ed2464108b8fde0675bb5346f)
 <br/>
 
-## 쉘 스크립트를 이용한 설치 방법
+## 🛠 쉘 스크립트를 이용한 설치 방법
 
 ### ELK stack 전체를 한번에 설치하는 경우
 -  **ELK-Install.sh**
